@@ -1,0 +1,96 @@
+
+.contenedor-header {
+    background-color: rgb(255, 211, 36) !important;
+}
+
+.nombre-diagno {
+    color: white !important;
+}
+
+.nombre-diagno span {
+    color: black;
+}
+
+.slogan {
+
+    color: #293241;
+}
+
+/* sobre nosotros */
+.contenedor-nosotros {
+    background-color: white !important ;
+    padding: 2rem;
+    border-color: #293241 !important;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;  /* O*/
+}
+
+.titulo-nosotros {
+    color: #293241;
+    font-size: 2.5rem !important;
+}
+
+
+/* Contenedor servicios */
+.contenedor-servicios {
+    background-color: #293241 !important;
+}
+
+.icono-amarillo i {
+    color: #fca311;
+}
+
+/* navegacion */
+.navegacion {
+    background-color: black !important;
+}
+
+
+/* footer */
+.contenedor-footer {
+    padding: 2rem !important;
+    background-color: #FFD525 !important;
+}
+
+.social-diagno {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 1.5rem;
+  background-color: #293241;
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+footer.footer .social-diagno:hover {
+    background-color: black;
+    text-decoration: none;
+  }
+
+
+
+/* contacto  */
+.contenedor-contacto {
+    background-color: #293241 !important;
+}
+
+.contenedor {
+    width: 70% !important;
+}
+
+.boton-enviar {
+    width: 30%;
+}
+
+
+/* icono whatsapp */
+.icono-ws i {
+    font-size: 2.4rem !important;
+    margin-top: 0.4rem;
+    color: white;
+}
+

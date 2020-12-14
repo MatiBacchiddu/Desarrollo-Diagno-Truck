@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
@@ -47,9 +48,6 @@
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#portfolio">Galeria</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Trabajá con nosotros</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#contacto">Contacto</a>
@@ -114,6 +112,7 @@
         <h2 class="mb-5">¿Que ofrecemos?</h2>
       </div>
       <div class="row">
+
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-truck-moving"></i>
@@ -123,6 +122,7 @@
           </h4>
           <p class="text-faded mb-0">Lorem ipsum dolor sit amet.</p>
         </div>
+
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-truck-moving"></i>
@@ -130,8 +130,12 @@
           <h4>
             <strong>Servicio</strong>
           </h4>
-          <p class="text-faded mb-0">FLorem ipsum dolor sit amet.</p>
+
+          
+        
         </div>
+        
+
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-truck-moving"></i>
@@ -141,6 +145,7 @@
           </h4>
           <p class="text-faded mb-0">Lorem ipsum dolor sit amet.</p>
         </div>
+
         <div class="col-lg-3 col-md-6">
           <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-truck-moving"></i>
@@ -150,6 +155,7 @@
           </h4>
           <p class="text-faded mb-0">Lorem ipsum dolor sit amet.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -265,6 +271,14 @@
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

@@ -11,9 +11,7 @@ class InicioController extends Controller
     //
     public function index()
     {
-
         $noticias = Noticia::all();
-
         return view('inicio.index')->with('noticias', $noticias);
     }
 }

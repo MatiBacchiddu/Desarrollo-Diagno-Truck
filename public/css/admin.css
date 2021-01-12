@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion-lav {
+    width: 100% !important;
+}
+
+body {
+    background-color: #FFD525 !important;
+}
+
+.contenedor-iconos {
+    display: flex;
+    justify-content: center;
+    margin: 10rem 2rem ;
+    flex-wrap: wrap;
+}
+
+.item-icono {
+    text-align: center;
+    margin: 2rem;
+}
+
+.item-icono i {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.item-icono p {
+    font-size: 1.3rem;
+}
+
+
+/* Consultas */
+
+.contenedor-consultas{
+    background-color: white;
+    margin-top: 2rem;
+}
+
+/* Noticias */
+.boton-enviar {
+    padding: 0.5rem 3rem !important;
+}
+
+/* Servicios */
+
+.contenedor-serviciosAdminSupremo {
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor-serviciosAdmin {
+    background-color: white;
+    margin-top: 2rem;
+    height: 100%;
+    width: 50%;
+    border-radius: 2%;
+}
+
+.servicios-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.tituloServicioAdmin {
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+@media(max-width: 600px) {
+    .contenedor-serviciosAdmin {
+        width: 70%;
+    }
+}

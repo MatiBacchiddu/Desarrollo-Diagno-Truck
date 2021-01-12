@@ -24,6 +24,12 @@
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
 
+  <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
+  <link rel="stylesheet" href="css/modal.css">
+
+  <!--Leaftlet-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
 </head>
 
 <body id="page-top">
@@ -47,7 +53,10 @@
         <a class="js-scroll-trigger" href="#services">Servicios</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Galeria</a>
+        <a class="js-scroll-trigger" href="#novedades">Novedades</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#ubicacion">Ubicación</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#contacto">Contacto</a>
@@ -55,10 +64,18 @@
     </ul>
   </nav>
 
+  @if(session('estado'))
+
+    <div class="notificacion-consulta">
+        <p>{{session('estado')}}</p>
+    </div>
+
+  @endif
+
   <!-- Header -->
   <header class="contenedor-header masthead d-flex">
     <div class="container text-center my-auto">
-        <img src="{{asset('/img/logo.png')}}" alt="imagen">
+        <img class="imagen-logo" src="{{asset('/img/logo1.png')}}" alt="imagen">
       <h1 class="mb-1 nombre-diagno">Diagno <span>Truck</span></h1>
       <h3 class="mb-5">
         <p class="slogan">Centro Electrónico para Diagnóstico de Pesados</p>
@@ -68,177 +85,225 @@
     <div class="overlay"></div>
   </header>
 
-  <!-- About -->
-  <section class="content-section bg-light" id="about">
-    <div class="container text-center">
-      <div class="row contenedor-nosotros">
-        <div class="col-lg-10 mx-auto">
-          <h2 class="titulo-nosotros">Sobre nosotros</h2>
-          <p class="lead mb-5">
 
-            Somos Diagno Truck S.R.L., una empresa dedicada exclusivamente a la inyección electrónica de vehículos diesel, creada para lograr que los mismos, mantengan el excelente rendimiento para el que fueron creados.
-            <br>
-            <br>
-            Contamos con 2 talleres, uno, situado sobre la colectora del Acc. Oeste mano a capital, a la altura del km 39 y el otro taller en Av colectora este panamericana 1860 ramal escobar km 47,5
-            <br>
-            <br>
-            Nuestro personal, dispone de la más amplia gama de equipos de prueba y diagnóstico y se basa en una amplia experiencia acumulada durante años, como así también en el constante estudio de las nuevas tecnologías.
-            <br>
-            <br>
-            Entre nuestros equipos, contamos con un banco a rodillos que nos permite medir la potencia a la rueda en todo el régimen del motor, e incluso simular un viaje con una carga determinada, sin necesidad de sacar el vehículo del taller, eliminando así el riesgo que esto conlleva.
-            <br>
-            <br>
-            Como innovación al país, sumamos el centro de reprogramación, con la mayor tecnología y seguridad para nuestros camiones. Llevando el torque máximo a menos revoluciones de motor, logrando asi, mejores rendimientos y una disminución de consumo de combustible de entre 2 y 4 litros cada 100km.
-            <br>
-            <br>
-            A lo mencionado, sumamos nuestro propio laboratorio diesel, que dispone de la más amplia gama de equipos de prueba y diagnostico para la reparación y calibración de sistemas de inyección diesel.
-            <br>
-            <br>
-            Por todo esto, es que podemos brindar a nuestros clientes un servicio basado en los mas altos estándares de calidad y seguridad a la altura de las exigencias de la actualidad. Garantizando al 100% nuestros trabajos.
-            <br>
-            <br>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Nuestros Servicios</a>
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+        <div class="container text-center">
+          <div class="row contenedor-nosotros">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="titulo-nosotros">Sobre nosotros</h2>
+              <p class="lead mb-5">
+
+                Somos Diagno Truck S.R.L., una empresa dedicada exclusivamente a la inyección electrónica de vehículos diesel, creada para lograr que los mismos, mantengan el excelente rendimiento para el que fueron creados.
+                <br>
+                <br>
+                Contamos con 2 talleres, uno, situado sobre la colectora del Acc. Oeste mano a capital, a la altura del km 39 y el otro taller en Av colectora este panamericana 1860 ramal escobar km 47,5
+                <br>
+                <br>
+                Nuestro personal, dispone de la más amplia gama de equipos de prueba y diagnóstico y se basa en una amplia experiencia acumulada durante años, como así también en el constante estudio de las nuevas tecnologías.
+                <br>
+                <br>
+                Entre nuestros equipos, contamos con un banco a rodillos que nos permite medir la potencia a la rueda en todo el régimen del motor, e incluso simular un viaje con una carga determinada, sin necesidad de sacar el vehículo del taller, eliminando así el riesgo que esto conlleva.
+                <br>
+                <br>
+                Como innovación al país, sumamos el centro de reprogramación, con la mayor tecnología y seguridad para nuestros camiones. Llevando el torque máximo a menos revoluciones de motor, logrando asi, mejores rendimientos y una disminución de consumo de combustible de entre 2 y 4 litros cada 100km.
+                <br>
+                <br>
+                A lo mencionado, sumamos nuestro propio laboratorio diesel, que dispone de la más amplia gama de equipos de prueba y diagnostico para la reparación y calibración de sistemas de inyección diesel.
+                <br>
+                <br>
+                Por todo esto, es que podemos brindar a nuestros clientes un servicio basado en los mas altos estándares de calidad y seguridad a la altura de las exigencias de la actualidad. Garantizando al 100% nuestros trabajos.
+                <br>
+                <br>
+                <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Nuestros Servicios</a>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+  <div class="servicios" id="services">
+        <div class="contenedor-servicios-secu">
+          <h3 class="text-secondary mb-0 servicios-text">Servicios</h3> <br>
+          <h2 class="servicios-text ofrecemos">¿Qué ofrecemos?</h2>
+        </div>
+
+        <div class="servicios-secu">
+
+            <div class="item-serv">
+                <span>
+                <i class="fas fa-truck-moving"></i>
+                </span>
+
+                <h4>
+                    <strong>Laboratorio</strong>
+                </h4>
+
+                <p>Ver mas</p>
+
+            </div>
+
+            <div class="item-serv">
+
+                <span>
+                    <i class="fas fa-truck-moving"></i>
+                </span>
+
+                <h4>
+                    <strong>Urea</strong>
+                </h4>
+
+                <p>Ver mas</p>
+
+            </div>
+
+
+            <div class="item-serv">
+
+                <span>
+                    <i class="fas fa-truck-moving"></i>
+                </span>
+
+                <h4>
+                    <strong>Motores</strong>
+                </h4>
+
+                <p>Ver mas</p>
+
+            </div>
+
 
         </div>
-      </div>
+
+        <div class="servicios-secu2">
+            <div class="item-serv2">
+
+                <span>
+                    <i class="fas fa-truck-moving"></i>
+                </span>
+
+                <h4>
+                    <strong>Banco a Rodillo</strong>
+                </h4>
+                <p>Ver mas</p>
+            </div>
+
+            <div class="item-serv2">
+
+                <span>
+                    <i class="fas fa-truck-moving"></i>
+                </span>
+
+                <h4>
+                    <strong>Instalación</strong>
+                </h4>
+                <p>Ver mas</p>
+            </div>
+        </div>
+  </div>
+
+
+
+
+
+
+<!--Seccion creada por mati-->
+  <section class="container" id="novedades">
+    <h2 class="text-center titulo-noticia">Noticias</h2>
+
+    <div class="contenedor-novedades">
+
+        @if(count($noticias) <= 0)
+            <p class="text-center">No hay noticias</p>
+
+        @else
+
+        @foreach($noticias as $noticia)
+            <div class="card" style="width: 18rem;">
+                <img src="/storage/imagenes/{{$noticia->imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{$noticia->titulo}}</h5>
+                    <p class="card-text">{{$noticia->descripcion}}</p>
+                </div>
+            </div>
+
+
+        @endforeach
+
+        @endif
+
+
+
     </div>
+
+
   </section>
 
-  <!-- Services -->
-  <section class="contenedor-servicios content-section bg-primary text-white text-center" id="services">
-    <div class="container">
-      <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">Servicios</h3>
-        <h2 class="mb-5">¿Que ofrecemos?</h2>
-      </div>
-      <div class="row">
 
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
-            <i class="fas fa-truck-moving"></i>
-          </span>
-          <h4>
-            <strong>Servicio</strong>
-          </h4>
-          <p class="text-faded mb-0">Lorem ipsum dolor sit amet.</p>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
-            <i class="fas fa-truck-moving"></i>
-          </span>
-          <h4>
-            <strong>Servicio</strong>
-          </h4>
-          
-        
-        </div>
-        
-
-        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-          <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
-            <i class="fas fa-truck-moving"></i>
-          </span>
-          <h4>
-            <strong>Servicio</strong>
-          </h4>
-          <p class="text-faded mb-0">Lorem ipsum dolor sit amet.</p>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <span class="icono-amarillo service-icon rounded-circle mx-auto mb-3">
-            <i class="fas fa-truck-moving"></i>
-          </span>
-          <h4>
-            <strong>Servicio</strong>
-          </h4>
-          <p class="text-faded mb-0">Lorem ipsum dolor sit amet.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <h2 class="text-center texto-ubicacion" id="ubicacion">Ubicación</h2>
 
 
-  <!-- Portfolio -->
-  <section class="content-section" id="portfolio">
-    <div class="container">
-      <div class="content-section-heading text-center">
-        <h2 class="text-secondary mb-5">Galería de imágenes </h2>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
-            <div class="caption">
-              <div class="caption-content">
-                <div class="h2">lorem ipsum1</div>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptates.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/camion2.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
-            <div class="caption">
-              <div class="caption-content">
-                <div class="h2">lorem ipsum2</div>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptates.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/camion2.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
-            <div class="caption">
-              <div class="caption-content">
-                <div class="h2">lorem ipsum3</div>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptates.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/camion2.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
-            <div class="caption">
-              <div class="caption-content">
-                <div class="h2">lorem ipsum4</div>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, voluptates.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/camion2.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="contenedor-ubicacion" id="mapa"></div>
+
 
   <!-- Call to Action -->
   <section class="contenedor-contacto content-section bg-primary text-white" id="contacto">
     <div class="contenedor container text-center">
       <h2 class="mb-4">Ponete en contacto con nosotros</h2>
-      <form>
+      <form
+      action="{{url('/consultaAdmin')}}"
+      method="POST">
+
+      @csrf
+
         <div class="form-group">
-          <label for="exampleInputEmail1">Correo electronico</label>
-          <input type="email" placeholder="e-mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="email">Correo electronico</label>
+          <input type="email"
+          name="email" placeholder="e-mail"
+          class="form-control @error('email') is-invalid @enderror"
+          id="email"
+          aria-describedby="emailHelp">
+
+          @error('email')
+          <span class="invalid-feedback d-block" role="alert">
+              <strong>{{$message}}</strong>
+          </span>
+           @enderror
+
         </div>
 
+
         <div class="form-group">
-            <label for="exampleInputEmail1">Teléfono</label>
-            <input type="text" placeholder="teléfono" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
+            <label for="tel">Teléfono</label>
+            <input name="tel" type="text" placeholder="teléfono" class="form-control @error('email') is-invalid @enderror" id="tel" aria-describedby="emailHelp">
+
+
+          @error('tel')
+          <span class="invalid-feedback d-block" role="alert">
+              <strong>{{$message}}</strong>
+          </span>
+           @enderror
+
+        </div>
 
           <div class="form-group">
-            <label for="exampleInputEmail1">Empresa</label>
-            <input type="text" placeholder="empresa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="empresa">Empresa (opcional)</label>
+            <input name="empresa" type="text" placeholder="empresa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
 
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
+            <label for="consulta">Consulta</label>
+            <textarea class="form-control @error('consulta') is-invalid @enderror" name="consulta" id="consulta" rows="3"></textarea>
+
+
+            @error('consulta')
+            <span class="invalid-feedback d-block" role="alert">
+                <strong>{{$message}}</strong>
+            </span>
+            @enderror
+
+        </div>
         <button type="submit" class="btn btn-outline-warning boton-enviar mt-3">Enviar</button>
       </form>
     </div>
@@ -250,12 +315,12 @@
 
       <ul class="list-inline mb-5">
         <li class="list-inline-item">
-          <a class="social-diagno rounded-circle text-white mr-3" href="#!">
+          <a target="blank" class="social-diagno rounded-circle text-white mr-3" href="https://www.facebook.com/DiagnoTruck">
             <i class="icon-social-facebook"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-diagno rounded-circle text-white mr-3" href="https://www.instagram.com/diagnotruck/" >
+          <a target="blank" class="social-diagno rounded-circle text-white mr-3" href="https://www.instagram.com/diagnotruck/" >
             <i class="icon-social-instagram"></i>
           </a>
         </li>
@@ -266,10 +331,11 @@
 
   <!-- Scroll to Top Button-->
   <div class="icono-ws">
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <a target="blank" class="scroll-to-top rounded js-scroll-trigger" href="https://bit.ly/3mWbVxn">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
+
 
 
 
@@ -289,8 +355,42 @@
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
 
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!---Leaftlet-->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    var map = L.map('mapa').setView([-34.452502, -58.803978], 10);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([-34.6240133,-58.8234273]).addTo(map)
+        .bindPopup('Diagno Truck Moreno')
+        .openPopup();
+
+    var escobar = L.marker([-34.3650043,-58.7827476]).addTo(map)
+        .bindPopup('Diagno Truck Escobar')
+        .openPopup();
+
+})
+
+/* -34.6240133,-58.8234273 */
+
+
+
+
+
+
+</script>
 
 </body>
 

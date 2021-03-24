@@ -53,7 +53,7 @@
         <a class="js-scroll-trigger" href="#services">Servicios</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#novedades">Novedades</a>
+        <a class="js-scroll-trigger" href="#novedades">Noticias</a>
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#ubicacion">Ubicación</a>
@@ -140,8 +140,44 @@
                     <strong>Laboratorio</strong>
                 </h4>
 
-                <p>Ver mas</p>
+                {{-- Inicio modal --}}
+                <input type="checkbox" id="btn-modal">
+                <label for="btn-modal" class="lbl-modal">Ver más</label>
+                    <div class="modal">
+                        <div class="contenedor-modal">
+                            <header>Laboratorio | Diagno Truck</header>
+                            <label for="btn-modal"><i class="fas fa-window-close"></i></label>
+                            <div class="contenido-modal">
+                                <div class="contenedor-laboratorio">
+                                    <div class="imagen-laboratorio">
+                                        <img src="{{asset('img/laboratorio.jpeg')}}" alt="">
+                                    </div>
 
+                                    <div class="texto-laboratorio">
+                                        <p>
+                                            En la actualidad los vehículos deben cumplir con ciertas exigencias, entre ellas contar con mayor potencia, economizar el uso del combustible y a su vez proteger el medio ambiente. Bajo este marco han surgido nuevos sistemas de inyección diseñados para cumplimentar estos requerimientos. El common rail, uno de estos innovadores sistemas, permite inyectar la cantidad justa de combustible logrando grandes ahorros a la vez que reduce la emisión de gases contaminantes al ecosistema.
+
+                                            Estos nuevos desarrollos han revolucionado la industria del diesel y modificado el concepto de los tradicionales bombistas. La inversión en equipamiento y nuevas tecnologías son clave para poder brindar soluciones efectivas a la hora del diagnostico y reparación de equipos.
+
+                                            <br>
+
+                                            Nuestro laboratorio dispone del instrumental indicado para la reparación de equipos con common rail, lo que sumado a la capacitación del personal nos permite atender con éxito esta nueva demanda de servicio que cada vez esta más presente en el mercado.
+
+                                            El funcionamiento de los motores diesel modernos debe cumplir con cuatro exigencias fundamentales: Contener una escasa cantidad de materias nocivas, ser rentable, alcanzar potencias altas, y ser al mismo tiempo silenciosos. Los sistemas de inyección PDE (BOMBA-INYECTOR) y PLD (BOMBA-TUBERIA-INYECTOR) permiten alcanzar las más altas presiones de inyección cumplimentando las exigencias establecidas. Son sistemas con bombas de inyección individuales con control de tiempo a través de electroválvulas integradas.
+
+                                            <br>
+
+                                            Logran una flexibilidad notablemente superior para la adaptación del sistema de inyección al motor, que los sistemas convencionales.
+
+                                            Nuestro laboratorio dispone de la más amplia tecnología para reparar estos sistemas y de esta forma asegurarles a nuestros clientes un funcionamiento óptimo de sus vehículos.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Cierre modal --}}
             </div>
 
             <div class="item-serv">
@@ -154,7 +190,44 @@
                     <strong>Urea</strong>
                 </h4>
 
-                <p>Ver mas</p>
+                 {{-- Inicio modal --}}
+                 <input type="checkbox" id="btn2-modal">
+                 <label for="btn2-modal" class="lbl-modal">Ver más</label>
+                     <div class="modal">
+                         <div class="contenedor-modal">
+                             <header>Urea | Diagno Truck</header>
+                             <label for="btn2-modal"><i class="fas fa-window-close"></i></label>
+                             <div class="contenido-modal">
+                                 <div class="contenedor-laboratorio">
+                                     <div class="imagen-urea">
+                                         <img src="" alt="">
+                                     </div>
+
+                                     <div class="texto-urea">
+                                         <p>
+                                             En la actualidad los vehículos deben cumplir con ciertas exigencias, entre ellas contar con mayor potencia, economizar el uso del combustible y a su vez proteger el medio ambiente. Bajo este marco han surgido nuevos sistemas de inyección diseñados para cumplimentar estos requerimientos. El common rail, uno de estos innovadores sistemas, permite inyectar la cantidad justa de combustible logrando grandes ahorros a la vez que reduce la emisión de gases contaminantes al ecosistema.
+
+                                             Estos nuevos desarrollos han revolucionado la industria del diesel y modificado el concepto de los tradicionales bombistas. La inversión en equipamiento y nuevas tecnologías son clave para poder brindar soluciones efectivas a la hora del diagnostico y reparación de equipos.
+
+                                             <br>
+
+                                             Nuestro laboratorio dispone del instrumental indicado para la reparación de equipos con common rail, lo que sumado a la capacitación del personal nos permite atender con éxito esta nueva demanda de servicio que cada vez esta más presente en el mercado.
+
+                                             El funcionamiento de los motores diesel modernos debe cumplir con cuatro exigencias fundamentales: Contener una escasa cantidad de materias nocivas, ser rentable, alcanzar potencias altas, y ser al mismo tiempo silenciosos. Los sistemas de inyección PDE (BOMBA-INYECTOR) y PLD (BOMBA-TUBERIA-INYECTOR) permiten alcanzar las más altas presiones de inyección cumplimentando las exigencias establecidas. Son sistemas con bombas de inyección individuales con control de tiempo a través de electroválvulas integradas.
+
+                                             <br>
+
+                                             Logran una flexibilidad notablemente superior para la adaptación del sistema de inyección al motor, que los sistemas convencionales.
+
+                                             Nuestro laboratorio dispone de la más amplia tecnología para reparar estos sistemas y de esta forma asegurarles a nuestros clientes un funcionamiento óptimo de sus vehículos.
+
+                                         </p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     {{-- Cierre modal --}}
 
             </div>
 
@@ -169,7 +242,7 @@
                     <strong>Motores</strong>
                 </h4>
 
-                <p>Ver mas</p>
+                <p>Ver </p>
 
             </div>
 
@@ -184,9 +257,43 @@
                 </span>
 
                 <h4>
-                    <strong>Banco a Rodillo</strong>
+                    <strong>Banco a Rodillos</strong>
                 </h4>
-                <p>Ver mas</p>
+                {{-- Inicio modal --}}
+                <input type="checkbox" id="btn3-modal">
+                <label for="btn3-modal" class="lbl-modal">Ver más</label>
+                    <div class="modal">
+                        <div class="contenedor-modal">
+                            <header>Banco a Rodillos | Diagno Truck</header>
+                            <label for="btn3-modal"><i class="fas fa-window-close"></i></label>
+                            <div class="contenido-modal">
+                                <div class="contenedor-banco">
+                                    <div class="imagen-banco">
+                                        <img src="{{asset('img/bancorodillo.jpeg')}}" alt="">
+                                    </div>
+
+                                    <div class="texto-banco">
+                                        <p>
+                                            <span>Los bancos de rodillos</span> permiten medir la potencia del vehículo sin necesidad de desmontar el motor. Esto permite realizar ensayos en el taller
+                                            evitando pruebas en calle o ruta con lo riesgoso y dificultoso que esto resulta.
+                                            <br>
+                                            Basado en un novedoso sistema de medición, permiten medir tanto la potencia a la rueda como la del motor y analizar el rendimiento de la transmisión.
+                                            Permite realizar pruebas consistentes con excelente sensibilidad dentro del taller evitando las pruebas en ruta con el riesgo que implican y la dificultad de diagnóstico.
+                                            <br>
+                                            Posee un freno hidráulico acoplado a los rodillos, esto permite simular cualquier condición de marcha durante el tiempo deseado. El sistema electrónico de adquisición de datos mide el torque entregado al freno y a partir de la velocidad de los rodillos se calcula la potencia disipada.
+                                            <br>
+                                            Este sistema de ensayo es lo más novedoso que existe para la medición de potencia y es el usado por los equipos de competición de todo el mundo. Su fundamento, parte del principio de inercia, tan antiguo como la física misma, pero factible de aplicarse a la medición de potencia desde el uso masivo de las computadoras.
+
+                                            Una herramienta imprescindible y eficaz, con la cual garantizamos al 100% nuestros trabajos.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Cierre modal --}}
+
             </div>
 
             <div class="item-serv2">
@@ -198,7 +305,7 @@
                 <h4>
                     <strong>Instalación</strong>
                 </h4>
-                <p>Ver mas</p>
+                <p>Ver </p>
             </div>
         </div>
   </div>
